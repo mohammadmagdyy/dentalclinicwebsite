@@ -2,20 +2,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:eshr7lly/utils.dart';
-void main()async {
-  initLogger(()async{
 
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle());
-    if(kIsWeb){
-      const int megabyte=1000000;
-      SystemChannels.skia.invokeMethod(
-        'Skia.setResourceCacheMaxBytes',512*megabyte
-      );
-      await Future<void>.delayed(Duration.zero);
-    }
+void main()async {
+
     runApp(MyApp());
-  });
+
 
 }
 
